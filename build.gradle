@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    group = 'com.poorjar.popit'
+    baseName = 'popit'
+    version =  '1.0-SNAPSHOT'
+}
+
+repositories { mavenCentral() }
+
+dependencies {
+    // tag::jetty[]
+    compile ('org.springframework.boot:spring-boot-starter-web:1.2.2.RELEASE') { exclude module: "spring-boot-starter-tomcat" }
+    compile 'org.springframework.boot:spring-boot-starter-jetty:1.2.2.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.6.RELEASE'
+
+    compile 'org.webjars:angularjs:1.4.7'
+    compile 'org.webjars:bootstrap:3.3.5'
+}
+
+buildscript {
+    repositories { mavenCentral() }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE'
+    }
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+task wrapper(type: Wrapper) { gradleVersion = '2.3' }
