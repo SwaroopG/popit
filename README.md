@@ -8,15 +8,13 @@
 ## Building the Project
 **gradle clean build**
 
-**Note**: This should build the project and package the archive to build/libs/ folder.
-
-## Running the Application
-**java -jar build/libs/popit-1.0-SNAPSHOT.jar**
-
-**Note**: Assuming that your archive is created in build/libs/ folder.
-
 ## One-shot Build & Run
+**gradle clean bootrun
 **gradle clean build && java -jar build/libs/popit-1.0-SNAPSHOT.jar**
+
+**Note**: This should build the project and package the archive to build/libs/ folder.
+## Running the application from the Jar
+**java -jar build/libs/popit-1.0-SNAPSHOT.jar**
 
 ## Verify
 Application should be available at **http://localhost:8080**
