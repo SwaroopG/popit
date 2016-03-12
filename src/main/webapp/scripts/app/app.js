@@ -16,15 +16,12 @@ app.run(['GAuth', 'GApi', 'GData', '$state', '$rootScope', '$window', '$cookies'
         var CLIENT = '373328618363-p4p5vje6oldkp8319mb7blajqlfv6lq1.apps.googleusercontent.com';
         var BASE;
         if($window.location.hostname == 'localhost') {
-            BASE = '//localhost:8300/_ah/api';
-        } else {
-            BASE = 'https://cloud-endpoints-gae.appspot.com/_ah/api';
+            BASE = '//localhost:8080/_ah/api';
         }
 
         GApi.load('myContactApi', 'v1', BASE);
-        GApi.load('calendar', 'v3');
         GAuth.setClient(CLIENT);
-        GAuth.setScope('https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar.readonly');
+        GAuth.setScope('https://www.googleapis.com/auth/userinfo.email');
 
         var currentUser = $cookies.get('userId');
         if(currentUser) {

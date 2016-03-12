@@ -1,8 +1,8 @@
-var controller = angular.module('pop-it.controller.home', []);
+'use strict';
 
-controller.controller('pop-it.controller.home', ['$scope', 'GApi',
-    function homeCtl($scope, GApi) {
+var module = angular.module('HomeController',[]);
 
+module.controller('HomeController', ['$scope', 'GApi', function homeCtl($scope, GApi) {
         GApi.executeAuth('myContactApi', 'contact.all').then(function(resp) {
                 $scope.contacts = resp.items;
             });
