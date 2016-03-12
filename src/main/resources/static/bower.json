@@ -1,0 +1,13 @@
+{
+  "name": "pop-it",
+  "version": "1.0.0",
+  "authors": [
+    "nitesh amireddy <nitesh.contact@gmail.com>"
+  ],
+  "description": "pop it",
+  "main": "dist/angular-google-gapi.min.js",
+  "dependencies": {
+    "angular-google-gapi": "~v1.0.0-beta.1",
+    "angular-ui-router": "~0.2.15"
+  }
+}

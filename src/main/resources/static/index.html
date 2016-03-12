@@ -1,12 +1,64 @@
-<!DOCTYPE html>
-<html>
-<body>
+﻿<!doctype html>
+<html ng-app="pop-it">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Pop IT</title>
 
-<button type="submit" class="btn btn-primary">Google</button>
-<p/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
-<p/>
-<button type="submit" class="btn btn-primary">Facebook</button>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Pop IT</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-show="gdata.getUser()"><a href="" ng-click="logout()">logout</a></li>
+            <li><a href="" >{{gdata.getUser().name}}</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-</body>
+    <!-- Begin page content -->
+    <div class="container">
+      <div ui-view></div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">© 2016 Pop IT</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-google-gapi/dist/angular-google-gapi.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controller.js"></script>
+    <script src="app/router.js"></script>
+    <script src="app/controller.home.js"></script>
+    <script src="app/controller.add.js"></script>
+    <script src="app/controller.edit.js"></script>
+    <script src="app/controller.login.js"></script>
+  </body>
 </html>
+
