@@ -9,12 +9,12 @@
 **gradle clean build**
 
 ## One-shot Build & Run
-**gradle clean bootrun
-**gradle clean build && java -jar build/libs/popit-1.0-SNAPSHOT.jar**
+gradle clean bootrun  
+gradle clean build && java -jar build/libs/popit-1.0-SNAPSHOT.jar**
 
 **Note**: This should build the project and package the archive to build/libs/ folder.
 ## Running the application from the Jar
-**java -jar build/libs/popit-1.0-SNAPSHOT.jar**
+java -jar build/libs/popit-1.0-SNAPSHOT.jar
 
 ## Verify
 Application should be available at **http://localhost:8080**
