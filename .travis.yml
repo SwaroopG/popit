@@ -3,10 +3,12 @@ node_js:
   - "0.12"
 sudo: false
 before_install:
-    - install -g npm@'>=2.13.0'
     - npm install -g grunt-cli
     - npm install -g bower
-script: grunt build
+before_script:
+    - bower install
+script:
+    - grunt build
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
