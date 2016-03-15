@@ -37,3 +37,64 @@ body > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.btn-google {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #dd4b39;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.btn-google:hover, .btn-google:focus, .btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
+    background-color: #c23321;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.btn-facebook {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #3b5998;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+    background-color: #2d4373;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+}
+
+.login-container {
+    background: linear-gradient(to bottom, #fff, #ddd);
+    margin: auto;
+    margin-top:25px;
+    width: 480px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+}
+
+.login-title {
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+.padding-space {
+    padding-top: 5px;
+}
