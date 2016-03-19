@@ -167,7 +167,18 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-            // src and dest is configured in a subtask called "generated" by usemin
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': ['.tmp/styles/{,*/}*.css']
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/scripts.js': ['<%= yeoman.dist %>/scripts/scripts.js']
+                }
+            }
         },
         ngtemplates:    {
             dist: {
