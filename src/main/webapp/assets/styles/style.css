@@ -27,15 +27,16 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 60px 15px 0;
+  padding: 20px 20px 20px 20px;
 }
 .container .text-muted {
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+  width: 100%;
 }
 
 .btn-google {
@@ -77,11 +78,11 @@ body > .container {
 .login-container {
     background: linear-gradient(to bottom, #fff, #ddd);
     margin: auto;
-    margin-top:25px;
+    margin-top: 85px;
     width: 480px;
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
     text-align: center;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
@@ -96,5 +97,46 @@ body > .container {
 }
 
 .padding-space {
-    padding-top: 5px;
+    padding-top: 10px;
+}
+
+@media (max-width: 978px) {
+    .container {
+      padding:0;
+      margin:0;
+    }
+
+    body {
+      padding:0;
+    }
+
+    .container>.navbar-header{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom:0;
+    }
+
+    .login-container {
+        background: linear-gradient(to bottom, #fff, #ddd);
+        margin: auto;
+        margin-top: 85px;
+        width: auto;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+    }
+
+    .footer > .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      width: 100%;
+    }
 }
