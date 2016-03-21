@@ -20,6 +20,3 @@ java -jar build/libs/popit-1.0-SNAPSHOT.war
 Application should be available at **http://localhost:8080**  
 [1]: https://secure.travis-ci.org/SwaroopG/popit.png  
 [2]: http://www.travis-ci.org/SwaroopG/popit  
-
-[3]: Pop-it App!  
-[4]: http://popitapp.tk
