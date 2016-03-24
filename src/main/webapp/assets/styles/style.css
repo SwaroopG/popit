@@ -39,40 +39,28 @@ body > .container {
   width: 100%;
 }
 
-.btn-google {
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #dd4b39;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
+.btn-google-plus {
+  color: #fff;
+  background-color: #dd4b39;
+  border: 1px solid #d54331;
 }
 
-.btn-google:hover, .btn-google:focus, .btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
-    background-color: #c23321;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
+.btn-google-plus:hover,
+.btn-google-plus:focus {
+  color: #fff;
+  background-color: #cb3927;
 }
 
 .btn-facebook {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #3b5998;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
+  color: #fff;
+  background-color: #3b5998;
+  border: 1px solid #335190;
 }
 
-.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
-    background-color: #2d4373;
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
+.btn-facebook:hover,
+.btn-facebook:focus {
+  color: #fff;
+  background-color: #294786;
 }
 
 .login-container {
