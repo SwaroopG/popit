@@ -1,51 +1,38 @@
 var app = angular.module('pop-it', [
-    'ngCookies',
-    'ui.router',
-    'angular-google-gapi',
+    'ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer',
 
     'pop-it.router',
     'pop-it.controller'
 
 ]);
 
-app.run(['GAuth', 'GApi', 'GData', '$state', '$rootScope', '$window', '$cookies',
-    function(GAuth, GApi, GData, $state, $rootScope, $window, $cookies) {
+app.config(function($authProvider) {
 
-        $rootScope.gdata = GData;
+    $authProvider.facebook({
+      clientId: '1090940347593289'
+    });
 
-        var CLIENT = '373328618363-p4p5vje6oldkp8319mb7blajqlfv6lq1.apps.googleusercontent.com';
-        var BASE;
-        if($window.location.hostname == 'localhost') {
-            BASE = '//localhost:8080/_ah/api';
-        }
+    $authProvider.google({
+      clientId: '373328618363-p4p5vje6oldkp8319mb7blajqlfv6lq1.apps.googleusercontent.com'
+    });
 
-        GApi.load('myContactApi', 'v1', BASE);
-        GAuth.setClient(CLIENT);
-        GAuth.setScope('https://www.googleapis.com/auth/userinfo.email');
-
-        var currentUser = $cookies.get('userId');
-        if(currentUser) {
-            GData.setUserId(currentUser);
-            GAuth.checkAuth().then(
-                function () {
-                    if($state.includes('login'))
-                        $state.go('home');
-                },
-                function() {
-                    $state.go('login');
-                }
-            );
+   function skipIfLoggedIn($q, $auth) {
+        var deferred = $q.defer();
+        if ($auth.isAuthenticated()) {
+          deferred.reject();
         } else {
-            $state.go('login');
+          deferred.resolve();
         }
+        return deferred.promise;
+      }
 
-
-
-        $rootScope.logout = function() {
-            GAuth.logout().then(function () {
-                $cookies.remove('userId');
-                $state.go('login');
-            });
-        };
-    }
-]);
+      function loginRequired($q, $location, $auth) {
+        var deferred = $q.defer();
+        if ($auth.isAuthenticated()) {
+          deferred.resolve();
+        } else {
+          $location.path('/login');
+        }
+        return deferred.promise;
+      }
+  });

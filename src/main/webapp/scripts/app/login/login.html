@@ -1,7 +1,10 @@
 <div class="login-container ng-scope">
-    <h2 class="login-title">Login</h2>
-    <a class="btn btn-lg btn-block btn-google" ng-click="doLogin()" href="" role="button">Google </a>
-    <p class="padding-space"></p>
-    <a class="btn btn-lg btn-block btn-facebook" ng-click="doLogin()" href="" role="button">Facebook</a>
+    <h2 class="login-title">Sign in</h2>
+    <button class="btn btn-block btn-facebook" ng-click="authenticate('facebook')">
+        <i class="ion-social-facebook"></i> Facebook
+    </button>
+    <button class="btn btn-block btn-google-plus" ng-click="authenticate('google')">
+        <span class="ion-social-googleplus"></span> Google
+    </button>
     <p></p>
 </div>
